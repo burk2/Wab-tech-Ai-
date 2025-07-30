@@ -1,0 +1,242 @@
+/* Wab Tech AI Custom Color Palette */
+:root {
+    --color-black: #000000;
+    --color-gold: #DAA520; /* Richer, burnished gold */
+    --color-light-bg: #F8F8F8; /* Off-white for main content */
+    --color-light-grey: #EEEEEE; /* Subtle grey for borders/details */
+    --color-dark-grey: #333333; /* For body text */
+    --color-secondary-accent: #0F4C5C; /* Deep Teal/Blue-Green */
+}
+
+/* Basic General Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-light-bg);
+    color: var(--color-dark-grey);
+}
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Header Styling (with Logo) */
+header {
+    background: var(--color-black);
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: var(--color-secondary-accent) 3px solid;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.logo {
+    max-width: 180px; /* Adjust as needed */
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+.site-title { /* If you decide to use this text title (currently commented out in HTML) */
+    font-size: 2.5em;
+    margin: 0;
+    color: var(--color-gold);
+}
+header p {
+    font-size: 1.1em;
+    margin: 5px 0;
+    color: #ccc; /* Slightly softer white for slogans against black */
+}
+
+/* Hero Section Styling */
+.hero-section {
+    /* Placeholder for a background image. If you add one, place 'abstract-ai-background.jpg' in assets/images/ */
+    /* If you don't want an image, just use background: var(--color-black); */
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('../images/abstract-ai-background.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    z-index: 1; /* Ensures content is above background overlay */
+}
+
+.hero-section h1 {
+    font-size: 3.2em;
+    margin-bottom: 20px;
+    color: var(--color-gold); /* Your brand gold for the main message */
+    line-height: 1.2;
+}
+
+.hero-section .tagline {
+    font-size: 1.4em;
+    margin-bottom: 40px;
+    color: #ddd; /* Softer white for tagline */
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+.btn-primary {
+    background-color: var(--color-gold);
+    color: var(--color-black); /* Black text on gold button */
+    border: 2px solid var(--color-gold);
+}
+
+.btn-primary:hover {
+    background-color: #e6c200; /* Slightly darker gold on hover */
+    border-color: #e6c200;
+    color: var(--color-black);
+}
+
+.btn-secondary {
+    background-color: transparent; /* Transparent background */
+    color: var(--color-gold); /* Gold text */
+    border: 2px solid var(--color-gold); /* Gold border */
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-gold); /* Gold background on hover */
+    color: var(--color-black); /* Black text on hover */
+}
+
+/* Other Sections Styling */
+.mission-vision, .sections {
+    background: #fff;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+h2 {
+    color: var(--color-gold);
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+h3 {
+    color: var(--color-black);
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+ul li:before { /* Custom bullet point using your gold color */
+    content: '\2022'; /* Unicode for a solid bullet */
+    color: var(--color-gold);
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+a {
+    color: var(--color-gold);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--color-black);
+    color: #fff;
+    margin-top: 30px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    .logo {
+        max-width: 150px;
+    }
+    .site-title {
+        font-size: 2em;
+    }
+    header p {
+        font-size: 1em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    h3 {
+        font-size: 1.2em;
+    }
+    .hero-section {
+        padding: 60px 15px;
+        min-height: 350px;
+    }
+    .hero-section h1 {
+        font-size: 2.2em;
+    }
+    .hero-section .tagline {
+        font-size: 1.2em;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Important: Smooth scrolling targets for buttons */
+#solutions {
+    padding-top: 80px; /* Offset for sticky header if you add one later */
+    margin-top: -80px; /* Counter-act padding to make the scroll position accurate */
+}
+#academy {
+    padding-top: 80px;
+    margin-top: -80px;
+}
