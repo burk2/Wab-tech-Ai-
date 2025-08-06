@@ -12,7 +12,7 @@ body {
     padding: 0 20px;
 }
 
-/* Header & Navigation */
+/* Original Header & Hero Section */
 header {
     background-color: #333;
     color: #fff;
@@ -20,13 +20,6 @@ header {
     text-align: center;
 }
 
-.logo p {
-    margin: 0;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-/* Hero Section */
 .hero {
     background-color: #333;
     color: #fff;
@@ -37,12 +30,6 @@ header {
 .hero-content h1 {
     font-size: 3em;
     margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 1.2em;
-    max-width: 800px;
-    margin: 0 auto 40px;
 }
 
 .hero-buttons .btn {
@@ -65,7 +52,7 @@ header {
     color: #fff;
 }
 
-/* Vision & Mission Section */
+/* Original Vision & Mission Section */
 .vision-mission {
     padding: 50px 20px;
     text-align: center;
@@ -88,102 +75,63 @@ header {
     margin-bottom: 10px;
 }
 
-/* New Education Niche Section */
-.education-niche {
-    padding: 80px 0;
-    background-color: #fff;
-}
-
-.education-header {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    padding: 20px;
-    background-color: #f0f0f0;
-    margin-bottom: 50px;
-}
-
-.header-image {
-    width: 50%;
-    object-fit: cover;
-}
-
-.header-text {
-    width: 50%;
-    padding-right: 20px;
-}
-
-.header-text h2 {
-    font-size: 2.5em;
-    color: #333;
-}
-
-.education-intro {
+/* NEW: Our Niches with Card Design (without images) */
+.niches-overview {
+    background-color: #f89025;
+    padding: 60px 0;
     text-align: center;
-    margin-bottom: 50px;
 }
 
-.education-intro h3 {
-    font-size: 2em;
-    color: #ffc107;
+.niches-overview h2 {
+    color: #fff;
+    font-size: 2.5em;
+    margin-bottom: 40px;
 }
 
-.academy-programs {
+.niche-cards-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
     justify-content: center;
+    gap: 30px;
 }
 
-.program-card {
-    width: 30%;
-    min-width: 300px;
+.niche-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 280px;
+    padding: 30px;
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    overflow: hidden;
+    text-decoration: none;
+    color: #333;
     transition: transform 0.3s ease;
 }
 
-.program-card:hover {
+.niche-card:hover {
     transform: translateY(-10px);
 }
 
-.program-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.program-content {
-    padding: 20px;
-    text-align: left;
-}
-
-.program-content h3 {
+.niche-card h3 {
+    font-size: 1.5em;
     color: #333;
     margin-top: 0;
-    font-size: 1.5em;
 }
 
-.program-content .price {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #ffc107;
-    margin: 10px 0;
-}
-
-.program-content p {
+.niche-card p {
     font-size: 1em;
     color: #555;
     margin-bottom: 20px;
+    text-align: left;
 }
 
-.program-content .btn {
-    display: block;
-    width: 100%;
-    text-align: center;
-    font-size: 1em;
+.read-more {
+    color: #ffc107;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    align-self: flex-start;
 }
 
 /* Responsive adjustments */
@@ -193,15 +141,7 @@ header {
         width: 100%;
         margin-bottom: 20px;
     }
-    .education-header {
-        flex-direction: column;
-        text-align: center;
-    }
-    .header-image, .header-text {
-        width: 100%;
-        padding: 0;
-    }
-    .program-card {
+    .niche-card {
         width: 100%;
     }
 }
