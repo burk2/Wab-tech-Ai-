@@ -12,14 +12,29 @@ body {
     padding: 0 20px;
 }
 
-/* Original Header & Hero Section */
+/* Header Section */
 header {
-    background-color: #333;
+    background-color: #000;
     color: #fff;
     padding: 15px 0;
     text-align: center;
 }
 
+.logo-text h1 {
+    font-family: 'Arial Black', sans-serif; /* A bold, clean font to start with */
+    color: #ffc107; /* The yellow/gold color */
+    margin: 0;
+    font-size: 2.5em; /* Adjust size as needed */
+}
+
+.logo-text p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    margin: 0;
+    font-size: 1em;
+}
+
+/* Hero Section */
 .hero {
     background-color: #333;
     color: #fff;
@@ -30,6 +45,12 @@ header {
 .hero-content h1 {
     font-size: 3em;
     margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto 40px;
 }
 
 .hero-buttons .btn {
@@ -52,7 +73,7 @@ header {
     color: #fff;
 }
 
-/* Original Vision & Mission Section */
+/* Vision & Mission Section */
 .vision-mission {
     padding: 50px 20px;
     text-align: center;
@@ -75,7 +96,7 @@ header {
     margin-bottom: 10px;
 }
 
-/* NEW: Our Niches with Card Design (without images) */
+/* Our Niche Expertise Section */
 .niches-overview {
     background-color: #f89025;
     padding: 60px 0;
