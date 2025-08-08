@@ -9,8 +9,8 @@ body {
 
 /* Header & Navigation */
 header {
-    background-color: #FFFFFF;
-    color: #333333;
+    background-color: #000000;
+    color: #FFFFFF;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -21,13 +21,13 @@ header {
 .logo-text h1 {
     font-size: 1.8rem;
     margin: 0;
-    color: #000000; /* Black for the main logo text */
+    color: #FFFFFF; /* White for the main logo text */
 }
 
 .logo-text p {
     font-size: 0.8rem;
     margin: 0;
-    color: #6C757D;
+    color: #C0A045; /* Gold for the tagline */
 }
 
 /* Hero Section */
@@ -50,7 +50,7 @@ header {
 }
 
 /* Main Content Sections */
-.vision-mission, .niches-overview {
+.vision-mission, .niches-overview, .offerings-grid {
     padding: 2rem 1rem;
     text-align: center;
 }
@@ -89,7 +89,9 @@ header {
     flex: 1 1 250px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     text-align: center;
+    text-decoration: none;
     transition: transform 0.2s;
+    color: #000000; /* Niche card text is black by default */
 }
 
 .niche-card:hover {
@@ -99,6 +101,43 @@ header {
 .niche-card h3 {
     margin-top: 0;
     color: #C0A045; /* Gold accent for headings */
+}
+
+.niche-card .read-more {
+    color: #C0A045; /* Gold link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Offerings Grid Styles */
+.offerings-grid {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.offerings-grid h2 {
+    color: #C0A045; /* Gold heading on black background */
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.offer-card {
+    background-color: #FFFFFF;
+    border: 2px solid #C0A045; /* Gold border */
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: left;
+    color: #333333;
+}
+
+.offer-card h3 {
+    color: #C0A045; /* Gold heading inside card */
+    margin-top: 0;
 }
 
 /* Buttons */
