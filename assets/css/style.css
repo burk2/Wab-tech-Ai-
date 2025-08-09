@@ -3,31 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     line-height: 1.6;
-    color: #333333; /* Dark text for readability */
-    background-color: #F8F9FA; /* Light gray background */
-}
-
-/* Header & Navigation */
-header {
-    background-color: #000000;
-    color: #FFFFFF;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #EEEEEE;
-}
-
-.logo-text h1 {
-    font-size: 1.8rem;
-    margin: 0;
-    color: #FFFFFF; /* White for the main logo text */
-}
-
-.logo-text p {
-    font-size: 0.8rem;
-    margin: 0;
-    color: #C0A045; /* Gold for the tagline */
+    color: #333333;
+    background-color: #F8F9FA;
 }
 
 /* Updated Header for Index.html */
@@ -35,39 +12,30 @@ header {
     background-color: #000000;
     padding: 2rem;
     color: #FFFFFF;
-    background-image: url('../images/circuit-head.jpg'); /* The corrected path for the background image */
+    background-image: url('../images/circuit-head.jpg');
     background-size: contain;
     background-position: right center;
     background-repeat: no-repeat;
-    min-height: 200px; /* Ensures space for the background image */
+    min-height: 200px;
     display: flex;
-    align-items: center;
+    justify-content: center; /* This centers the logo horizontally */
+    align-items: center; /* This centers the logo vertically */
 }
 
-.header-content-left {
+.header-content-center {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 1.5rem;
 }
 
 .ai-logo {
-    height: 60px;
+    height: 180px; /* Increased the height to make the logo larger */
     width: auto;
-}
-
-.catching-header .logo-text h1 {
-    font-size: 2.2rem;
-    color: #C0A045;
-}
-
-.catching-header .logo-text p {
-    font-size: 0.9rem;
-    color: #C0A045;
 }
 
 /* Hero Section */
 .hero {
-    background-color: #000000; /* Black background to match logo */
+    background-color: #000000;
     color: #FFFFFF;
     text-align: center;
     padding: 4rem 2rem;
@@ -126,7 +94,7 @@ header {
     text-align: center;
     text-decoration: none;
     transition: transform 0.2s;
-    color: #000000; /* Niche card text is black by default */
+    color: #000000;
 }
 
 .niche-card:hover {
@@ -135,11 +103,11 @@ header {
 
 .niche-card h3 {
     margin-top: 0;
-    color: #C0A045; /* Gold accent for headings */
+    color: #C0A045;
 }
 
 .niche-card .read-more {
-    color: #C0A045; /* Gold link color */
+    color: #C0A045;
     text-decoration: none;
     font-weight: bold;
 }
@@ -151,7 +119,7 @@ header {
 }
 
 .offerings-grid h2 {
-    color: #C0A045; /* Gold heading on black background */
+    color: #C0A045;
 }
 
 .grid-cards {
@@ -163,7 +131,7 @@ header {
 
 .offer-card {
     background-color: #FFFFFF;
-    border: 2px solid #C0A045; /* Gold border */
+    border: 2px solid #C0A045;
     border-radius: 8px;
     padding: 1.5rem;
     text-align: left;
@@ -171,7 +139,7 @@ header {
 }
 
 .offer-card h3 {
-    color: #C0A045; /* Gold heading inside card */
+    color: #C0A045;
     margin-top: 0;
 }
 
@@ -186,12 +154,12 @@ header {
 }
 
 .btn-primary {
-    background-color: #C0A045; /* Gold accent button */
+    background-color: #C0A045;
     color: #FFFFFF;
 }
 
 .btn-primary:hover {
-    background-color: #A38634; /* Darker gold on hover */
+    background-color: #A38634;
 }
 
 /* Footer */
