@@ -14,12 +14,12 @@ body {
     color: #FFFFFF;
     background-image: url('circuit-head.jpg');
     background-size: contain;
-    background-position: right centre;
+    background-position: left;
     background-repeat: no-repeat;
     min-height: 200px;
     display: flex;
-    justify-content: center; /* This centers the logo horizontally */
-    align-items: center; /* This centers the logo vertically */
+    justify-content: left; /* This centers the logo horizontally */
+    align-items: left; /* This centers the logo vertically */
 }
 
 .header-content-center {
