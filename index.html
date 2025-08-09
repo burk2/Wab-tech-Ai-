@@ -1,97 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WabTech AI - Empowering through AI</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WabTech AI - Empowering through AI</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="catching-header">
-        <div class="header-content-left">
-            <img src="ai-brain-logo.jpg" alt="Wab Tech AI Logo" class="ai-logo">
-            <div class="logo-text">
-                <h1>WAB TECH AI</h1>
-                <p>Empowering through AI</p>
-            </div>
-        </div>
-    </header>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-logo">WAB TECH AI</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#vision">Vision</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#niches">Expertise</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Igniting Africa's Future with Intelligent AI</h1>
-            <p>Wab Tech AI: Pioneering ethical solutions, empowering knowledge, and transforming every facet of life and industry.</p>
-            <a href="#" class="btn btn-primary">Explore Our AI Solutions</a>
-        </div>
-    </section>
-    
-    <section class="vision-mission">
-        <div class="container">
-            <div class="section-card">
-                <h2>Our Vision for the Future</h2>
-                <p>A future where intelligent technology enriches daily lives, fuels sustainable progress, and unlocks unprecedented human potential for all in Africa and beyond.</p>
-            </div>
-            <div class="section-card">
-                <h2>Our Mission Today</h2>
-                <p>Wab Tech AI is dedicated to creating and deploying cutting-edge, locally-relevant AI literacy, ensuring intelligent technology serves humanity and addresses critical challenges across diverse sectors.</p>
-            </div>
-        </div>
-    </section>
+  <!-- Header -->
+  <header class="catching-header">
+    <div class="header-content-left">
+      <img src="ai-brain-logo.jpg" alt="Wab Tech AI Logo" class="ai-logo" />
+      <div class="logo-text">
+        <h1>WAB TECH AI</h1>
+        <p>Empowering through AI</p>
+      </div>
+    </div>
+  </header>
 
-    <section class="about-us">
-        <div class="container">
-            <div class="section-card">
-                <h2>About WabTech AI</h2>
-                <p>Wab Tech AI is a pioneering company dedicated to democratizing Artificial Intelligence. We believe in creating a world where AI serves humanity by providing innovative, ethical, and practical solutions across diverse sectors. Our work is focused on empowering individuals, businesses, and communities in Africa to leverage AI for growth, education, and positive social change.</p>
-            </div>
-        </div>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero fade-in" id="hero">
+    <div class="hero-content">
+      <h1>Igniting Africa's Future with Intelligent AI</h1>
+      <p>Wab Tech AI: Pioneering ethical solutions, empowering knowledge, and transforming every facet of life and industry.</p>
+      <a href="#" class="btn btn-primary">Explore Our AI Solutions</a>
+    </div>
+  </section>
 
-    <section class="niches-overview">
-        <div class="container">
-            <h2>Our Niche Expertise</h2>
-            <div class="niche-cards-container">
-                <a href="wabtech-talentnetwork.html" class="niche-card">
-                    <h3>WabTech AI Talent Network</h3>
-                    <p>Connect with top AI talent from our vetted network for your projects.</p>
-                    <span class="read-more">Read More</span>
-                </a>
-                <a href="education.html" class="niche-card">
-                    <h3>Wab Tech AI Academy</h3>
-                    <p>Our educational solutions are designed to modernize learning and empower all ages.</p>
-                    <span class="read-more">Read More</span>
-                </a>
-                <a href="business.html" class="niche-card">
-                    <h3>Business: AI Solutions for Your Business</h3>
-                    <p>Empower your enterprise with intelligent solutions that boost efficiency and growth.</p>
-                    <span class="read-more">Read More</span>
-                </a>
-                <a href="#" class="niche-card">
-                    <h3>Agriculture: Smarter Farming with AI</h3>
-                    <p>We bring precision agriculture to the forefront of sustainable food production.</p>
-                    <span class="read-more">Read More</span>
-                </a>
-                <a href="#" class="niche-card">
-                    <h3>Climate: Harnessing AI for a Sustainable Planet</h3>
-                    <p>We bring a new approach to Africa's most pressing environmental challenges.</p>
-                    <span class="read-more">Read More</span>
-                </a>
-            </div>
-        </div>
-    </section>
+  <!-- Vision & Mission -->
+  <section class="vision-mission fade-in" id="vision">
+    <div class="container">
+      <div class="section-card">
+        <h2>Our Vision for the Future</h2>
+        <p>A future where intelligent technology enriches daily lives, fuels sustainable progress, and unlocks unprecedented human potential for all in Africa and beyond.</p>
+      </div>
+      <div class="section-card">
+        <h2>Our Mission Today</h2>
+        <p>Wab Tech AI is dedicated to creating and deploying cutting-edge, locally-relevant AI literacy, ensuring intelligent technology serves humanity and addresses critical challenges across diverse sectors.</p>
+      </div>
+    </div>
+  </section>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Ready to Transform Your Business?</h2>
-            <p>Tell us about your needs, and we'll design a smart AI solution just for you.</p>
-            <a href="#" class="btn btn-primary">Get a Free Consultation</a>
-        </div>
-    </section>
+  <!-- About Us -->
+  <section class="about-us fade-in" id="about">
+    <div class="container">
+      <div class="section-card">
+        <h2>About WabTech AI</h2>
+        <p>Wab Tech AI is a pioneering company dedicated to democratizing Artificial Intelligence. We believe in creating a world where AI serves humanity by providing innovative, ethical, and practical solutions across diverse sectors. Our work is focused on empowering individuals, businesses, and communities in Africa to leverage AI for growth, education, and positive social change.</p>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Wab Tech AI. All rights reserved.</p>
-    </footer>
+  <!-- Niche Expertise -->
+  <section class="niches-overview fade-in" id="niches">
+    <div class="container">
+      <h2>Our Niche Expertise</h2>
+      <div class="niche-cards-container">
+        <a href="wabtech-talentnetwork.html" class="niche-card">
+          <h3>WabTech AI Talent Network</h3>
+          <p>Connect with top AI talent from our vetted network for your projects.</p>
+          <span class="read-more">Read More</span>
+        </a>
+        <a href="education.html" class="niche-card">
+          <h3>Wab Tech AI Academy</h3>
+          <p>Our educational solutions are designed to modernize learning and empower all ages.</p>
+          <span class="read-more">Read More</span>
+        </a>
+        <a href="business.html" class="niche-card">
+          <h3>Business: AI Solutions for Your Business</h3>
+          <p>Empower your enterprise with intelligent solutions that boost efficiency and growth.</p>
+          <span class="read-more">Read More</span>
+        </a>
+        <a href="#" class="niche-card">
+          <h3>Agriculture: Smarter Farming with AI</h3>
+          <p>We bring precision agriculture to the forefront of sustainable food production.</p>
+          <span class="read-more">Read More</span>
+        </a>
+        <a href="#" class="niche-card">
+          <h3>Climate: Harnessing AI for a Sustainable Planet</h3>
+          <p>We bring a new approach to Africa's most pressing environmental challenges.</p>
+          <span class="read-more">Read More</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="contact-form fade-in" id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Wab Tech AI. All rights reserved.</p>
+  </footer>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/254712345678" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">💬</a>
+
+  <!-- Scripts -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+
+    document.querySelector("form").addEventListener("submit", function (e) {
+      const name = this.querySelector("input[type='text']").value.trim();
+      const email = this.querySelector("input[type='email']").value.trim();
+      const message = this.querySelector("textarea").value.trim();
+
+      if (!name || !email || !message) {
+        alert("Please fill in all fields before submitting.");
+        e.preventDefault();
+      } else if (!email.includes("@")) {
+        alert("Please enter a valid email address.");
+        e.preventDefault();
+      }
+    });
+  </script>
 
 </body>
 </html>
