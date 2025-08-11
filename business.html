@@ -30,7 +30,11 @@
 
     header h1 {
       font-size: 2.5rem;
-      color: #ffd700;
+      /* Replaced solid yellow with a metallic gold gradient for the text */
+      background: linear-gradient(135deg, #d4af37, #a78726, #d4af37);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
       margin-bottom: 0.5rem;
     }
 
@@ -49,11 +53,11 @@
     }
 
     .yellow-box {
-      background-color: #ffd700;
+      background: linear-gradient(135deg, #d4af37, #a78726, #d4af37);
       color: #000000;
       padding: 1.5rem;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+      box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
       transition: transform 0.3s ease;
     }
 
