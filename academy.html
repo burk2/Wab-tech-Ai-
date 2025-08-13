@@ -1,106 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WabTech AI Academy Programs</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <title>WabTech AI Education Programs</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+    header {
+      padding: 40px;
+      text-align: center;
+      background-color: #000;
+      color: gold;
+    }
+    .container {
+      display: flex;
+      padding: 40px;
+    }
+    .sidebar {
+      width: 220px;
+      background-color: #111;
+      padding: 20px;
+      border-right: 1px solid gold;
+    }
+    .sidebar a {
+      display: block;
+      color: gold;
+      margin-bottom: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .content {
+      flex: 1;
+      padding: 0 40px;
+    }
+    .course-title {
+      font-size: 28px;
+      color: gold;
+      margin-bottom: 10px;
+    }
+    .tagline {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    .learn-section {
+      margin-bottom: 30px;
+    }
+    .learn-section h3 {
+      color: gold;
+      margin-bottom: 10px;
+    }
+    .learn-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    .learn-section li {
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+    }
+    .learn-section li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: gold;
+    }
+    .enroll-form {
+      background-color: #111;
+      padding: 20px;
+      border: 1px solid gold;
+      max-width: 400px;
+    }
+    .enroll-form h3 {
+      color: gold;
+      margin-bottom: 15px;
+    }
+    .enroll-form label {
+      display: block;
+      margin-top: 10px;
+      color: #fff;
+    }
+    .enroll-form input, .enroll-form select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      background-color: #000;
+      border: 1px solid gold;
+      color: #fff;
+    }
+    .enroll-form button {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: gold;
+      color: black;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .image-container {
+      width: 400px;
+      padding-left: 40px;
+    }
+    .image-container img {
+      width: 100%;
+      border: 2px solid gold;
+    }
+    .tab {
+      display: none;
+    }
+    .tab.active {
+      display: block;
+    }
+  </style>
+  <script>
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.tab');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
 </head>
 <body>
 
-    <header>
-        <div class="logo-text">
-            <h1>WAB TECH AI</h1>
-            <p>Empowering through AI</p>
-        </div>
-    </header>
+<header>
+  <h1>WabTech AI Education Programs</h1>
+  <p>Artificial Intelligence for Coders & Non-Coders</p>
+  <h2>Explore Our AI Courses</h2>
+</header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>WabTech Academy Programs</h1>
-            <p>Tailored AI training for organizations, groups, and individuals.</p>
-        </div>
-    </section>
+<div class="container">
+  <div class="sidebar">
+    <a href="#" onclick="showTab('entrepreneurs')">Entrepreneurs</a>
+    <a href="#" onclick="showTab('students')">Students</a>
+    <a href="#" onclick="showTab('professionals')">Professionals</a>
+    <a href="#" onclick="showTab('organizations')">Organizations</a>
+    <a href="#" onclick="showTab('general')">General Public</a>
+    <a href="#" onclick="showTab('coders')">Coders</a>
+  </div>
 
-    <section class="vision-mission">
-        <div class="container">
-            <div class="section-card">
-                <h2>Your Future in AI Starts with Us</h2>
-                <p>We believe in a hands-on, community-focused approach to learning. Our courses are built with real-world applications in mind, empowering you to not just learn about AI but to actually use it to solve problems and create opportunities.</p>
-            </div>
-        </div>
-    </section>
+  <div class="content">
 
-    <section class="vision-mission">
-        <div class="container">
-            <h2>Our Programs</h2>
-            <div class="section-card">
-                <h3>1. Prompt Engineering for Everyone (No-Code AI Training)</h3>
-                <p>This beginner-friendly training empowers people of all ages and backgrounds to effectively interact with AI tools like ChatGPT, Microsoft Copilot, Canva AI, and more — without any coding required.</p>
-                <h4>Who is it for?</h4>
-                <p>Students, teachers, entrepreneurs, farmers, professionals, and anyone curious about AI who lacks programming skills.</p>
-                <h4>What you’ll learn:</h4>
-                <ul>
-                    <li>Writing clear and powerful AI prompts to get the best results</li>
-                    <li>Using AI for writing, research, marketing, customer support, and everyday tasks</li>
-                    <li>Applying AI tools in agriculture, business, education, and climate action</li>
-                    <li>Basics of responsible AI use and prompt engineering</li>
-                </ul>
-            </div>
+    <!-- Entrepreneurs Tab -->
+    <div class="tab active" id="entrepreneurs">
+      <div class="course-title">Artificial Intelligence for Entrepreneurs</div>
+      <div class="tagline">Grow your business, streamline operations, and innovate with AI — no coding required.</div>
+      <div class="learn-section">
+        <h3>What You’ll Learn</h3>
+        <ul>
+          <li>Understand AI applications in business</li>
+          <li>Automate repetitive tasks using AI tools</li>
+          <li>Apply AI for marketing, sales, and customer engagement</li>
+          <li>Analyze data to make informed decisions</li>
+          <li>Innovate products and services</li>
+        </ul>
+      </div>
+      <div class="enroll-form">
+        <h3>Enroll Now</h3>
+        <label for="category1">I am an:</label>
+        <select id="category1">
+          <option>Entrepreneur</option>
+        </select>
+        <label for="name1">Full Name</label>
+        <input type="text" id="name1">
+        <label for="email1">Email Address</label>
+        <input type="email" id="email1">
+        <label for="password1">Create Password</label>
+        <input type="password" id="password1">
+        <button type="submit">Enroll Me</button>
+      </div>
+    </div>
 
-            <div class="section-card">
-                <h3>2. Artificial Intelligence, Data Science & Machine Learning Courses</h3>
-                <p>A comprehensive track designed to teach beginners and intermediate learners practical skills in AI, Data Science, and Machine Learning.</p>
-                <h4>Who is it for?</h4>
-                <p>Beginners with little or no coding background, intermediate learners aiming to deepen their AI knowledge, students, professionals, and tech enthusiasts.</p>
-                <h4>What you’ll learn:</h4>
-                <p>For Beginners:</p>
-                <ul>
-                    <li>Introduction to AI and its applications</li>
-                    <li>Data collection, cleaning, and visualization basics</li>
-                    <li>Fundamentals of machine learning (supervised and unsupervised)</li>
-                    <li>Simple tools including Excel, no-code platforms, and basic Python</li>
-                    <li>Responsible AI practices</li>
-                </ul>
-                <p>For Intermediate Learners:</p>
-                <ul>
-                    <li>Python for AI (NumPy, Pandas, Scikit-learn)</li>
-                    <li>Building ML models: classification, regression, clustering</li>
-                    <li>Introduction to deep learning and neural networks</li>
-                    <li>Hands-on projects like sales forecasting and crop prediction</li>
-                </ul>
-            </div>
+    <!-- Students Tab -->
+    <div class="tab" id="students">
+      <div class="course-title">Artificial Intelligence for Students</div>
+      <div class="tagline">Explore AI concepts, tools, and projects to prepare for future careers and innovation.</div>
+      <div class="learn-section">
+        <h3>What You’ll Learn</h3>
+        <ul>
+          <li>Understand how AI works</li>
+          <li>Use AI tools for school projects</li>
+          <li>Explore ethical and social impacts of AI</li>
+          <li>Build simple AI models</li>
+          <li>Prepare for AI-related careers</li>
+        </ul>
+      </div>
+    </div>
 
-            <div class="section-card">
-                <h3>3. AI Application Workshops & Webinars</h3>
-                <p>Focused, sector-specific sessions that build on prompt engineering skills to show how AI tools can be applied in various industries and social impact areas.</p>
-                <h4>Who is it for?</h4>
-                <p>Businesses, NGOs, community groups, creators, farmers, health workers, climate activists — anyone looking to apply AI practically.</p>
-                <h4>What you’ll get:</h4>
-                <ul>
-                    <li>Live demonstrations of AI tools tailored to specific sectors</li>
-                    <li>Case studies and best practices for business automation, digital content creation, climate monitoring, healthcare, and agriculture</li>
-                    <li>Interactive Q&A and problem-solving</li>
-                    <li>Guidance on ethical AI use</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+    <!-- Professionals Tab -->
+    <div class="tab" id="professionals">
+      <div class="course-title">Artificial Intelligence for Professionals</div>
+      <div class="tagline">Enhance your career with AI tools for productivity, decision-making, and innovation.</div>
+      <div class="learn-section">
+        <h3>What You’ll Learn</h3>
+        <ul>
+          <li>Use AI to improve workflow</li>
+          <li>Analyze data with AI tools</li>
+          <li>Integrate AI into your field</li>
+          <li>Collaborate with AI systems</li>
+          <li>Stay competitive in a tech-driven world</li>
+        </ul>
+      </div>
+    </div>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Ready to Launch Your AI Career?</h2>
-            <p>Don't wait to gain the skills of the future. Whether you're an organization or an individual, your path to AI expertise starts now.</p>
-            <form action="#" method="post">
-                <input type="email" name="email" placeholder="Enter your email to get started" required>
-                <button type="submit" class="btn btn-primary">Get Started</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Wab Tech AI. All rights reserved.</p>
-    </footer>
-
-</body>
-</html>
+    <!-- Organizations Tab -->
+    <div class="tab" id="organizations">
+      <div class="course-title">Artificial Intelligence for Organizations</div>
+      <div class="tagline">Empower teams, optimize operations, and drive innovation with AI strategies.</div>
+      <div
