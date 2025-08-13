@@ -11,10 +11,18 @@
       color: #fff;
     }
     header {
+      background-color: #000;
       padding: 40px;
       text-align: center;
-      background-color: #000;
       color: gold;
+    }
+    header h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 18px;
+      margin: 5px 0;
     }
     .container {
       display: flex;
@@ -32,10 +40,17 @@
       margin-bottom: 15px;
       text-decoration: none;
       font-weight: bold;
+      cursor: pointer;
     }
     .content {
       flex: 1;
       padding: 0 40px;
+    }
+    .tab {
+      display: none;
+    }
+    .tab.active {
+      display: block;
     }
     .course-title {
       font-size: 28px;
@@ -46,9 +61,6 @@
       font-size: 16px;
       margin-bottom: 20px;
       color: #fff;
-    }
-    .learn-section {
-      margin-bottom: 30px;
     }
     .learn-section h3 {
       color: gold;
@@ -74,6 +86,7 @@
       padding: 20px;
       border: 1px solid gold;
       max-width: 400px;
+      margin-top: 30px;
     }
     .enroll-form h3 {
       color: gold;
@@ -109,12 +122,6 @@
       width: 100%;
       border: 2px solid gold;
     }
-    .tab {
-      display: none;
-    }
-    .tab.active {
-      display: block;
-    }
   </style>
   <script>
     function showTab(tabId) {
@@ -129,22 +136,21 @@
 <header>
   <h1>WabTech AI Education Programs</h1>
   <p>Artificial Intelligence for Coders & Non-Coders</p>
-  <h2>Explore Our AI Courses</h2>
+  <p>Explore Our AI Courses</p>
 </header>
 
 <div class="container">
   <div class="sidebar">
-    <a href="#" onclick="showTab('entrepreneurs')">Entrepreneurs</a>
-    <a href="#" onclick="showTab('students')">Students</a>
-    <a href="#" onclick="showTab('professionals')">Professionals</a>
-    <a href="#" onclick="showTab('organizations')">Organizations</a>
-    <a href="#" onclick="showTab('general')">General Public</a>
-    <a href="#" onclick="showTab('coders')">Coders</a>
+    <a onclick="showTab('entrepreneurs')">Entrepreneurs</a>
+    <a onclick="showTab('students')">Students</a>
+    <a onclick="showTab('professionals')">Professionals</a>
+    <a onclick="showTab('organizations')">Organizations</a>
+    <a onclick="showTab('general')">General Public</a>
+    <a onclick="showTab('coders')">Coders</a>
   </div>
 
   <div class="content">
 
-    <!-- Entrepreneurs Tab -->
     <div class="tab active" id="entrepreneurs">
       <div class="course-title">Artificial Intelligence for Entrepreneurs</div>
       <div class="tagline">Grow your business, streamline operations, and innovate with AI — no coding required.</div>
@@ -174,7 +180,6 @@
       </div>
     </div>
 
-    <!-- Students Tab -->
     <div class="tab" id="students">
       <div class="course-title">Artificial Intelligence for Students</div>
       <div class="tagline">Explore AI concepts, tools, and projects to prepare for future careers and innovation.</div>
@@ -190,7 +195,6 @@
       </div>
     </div>
 
-    <!-- Professionals Tab -->
     <div class="tab" id="professionals">
       <div class="course-title">Artificial Intelligence for Professionals</div>
       <div class="tagline">Enhance your career with AI tools for productivity, decision-making, and innovation.</div>
@@ -206,8 +210,52 @@
       </div>
     </div>
 
-    <!-- Organizations Tab -->
     <div class="tab" id="organizations">
       <div class="course-title">Artificial Intelligence for Organizations</div>
       <div class="tagline">Empower teams, optimize operations, and drive innovation with AI strategies.</div>
-      <div
+      <div class="learn-section">
+        <h3>What You’ll Learn</h3>
+        <ul>
+          <li>Develop AI strategies for your organization</li>
+          <li>Train teams to use AI tools</li>
+          <li>Improve efficiency and decision-making</li>
+          <li>Use AI for customer service and engagement</li>
+          <li>Drive innovation and growth</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tab" id="general">
+      <div class="course-title">Artificial Intelligence for the General Public</div>
+      <div class="tagline">Learn how AI affects your life and how to use it safely and effectively.</div>
+      <div class="learn-section">
+        <h3>What You’ll Learn</h3>
+        <ul>
+          <li>Understand AI in everyday life</li>
+          <li>Use AI tools for personal tasks</li>
+          <li>Explore AI ethics and safety</li>
+          <li>Recognize AI in media and technology</li>
+          <li>Make informed decisions about AI</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tab" id="coders">
+      <div class="course-title">Artificial Intelligence for Coders</div>
+      <div class="tagline">Build and deploy AI models, integrate APIs, and solve real-world problems with code.</div>
+      <div class="learn-section">
+        <h3>What You’ll Learn</h3>
+        <ul>
+          <li>Build machine learning models</li>
+          <li>Use AI libraries and frameworks</li>
+          <li>Integrate AI APIs into your applications</li>
+          <li>Explore natural language processing (NLP) and computer vision</li>
+          <li>Deploy AI solutions to the cloud</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
