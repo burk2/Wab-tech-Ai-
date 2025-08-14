@@ -42,10 +42,6 @@
       right: 40px;
     }
 
-    .nav-buttons a {
-      text-decoration: none;
-    }
-
     .nav-buttons button {
       background-color: transparent;
       border: 2px solid #FFD700;
@@ -85,60 +81,102 @@
       }
     }
 
-    /* Section styling */
-    section {
-      padding: 50px 20px;
+    /* Styles for the new accordion section */
+    .courses-container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+      padding-top: 50px;
+    }
+
+    .courses-container h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+      color: #FFD700;
       text-align: center;
     }
 
-    #courses h2, #contact h2, #resources h2, #signup h2 {
+    .accordion {
+      background-color: #FFD700;
+      color: #000;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 18px;
+      transition: 0.4s;
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 5px;
+    }
+
+    .accordion.active, .accordion:hover {
+      background-color: #e6c200;
+    }
+
+    .panel {
+      padding: 0 18px;
+      background-color: #111;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .course-details {
+      padding: 20px 0;
+    }
+
+    .course-details p {
+      color: #ccc;
+      font-size: 16px;
+    }
+
+    .course-details strong {
+      color: #FFD700;
+    }
+
+    .sign-up-button {
+      background-color: #FFD700;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .sign-up-button:hover {
+      background-color: #e6c200;
+    }
+
+    .arrow {
+      font-size: 24px;
+      transition: transform 0.2s ease;
+    }
+
+    .accordion.active .arrow {
+      transform: rotate(90deg);
+    }
+
+    /* Sign-up form styling */
+    #signup {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    #signup h2 {
       font-size: 36px;
       margin-bottom: 40px;
       color: #FFD700;
     }
 
-    .course-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .course-card {
-      border: 1px solid #FFD700;
-      padding: 20px;
-      border-radius: 10px;
-      transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-    }
-
-    .course-card h3 {
-      margin-top: 0;
-      color: #FFD700;
-    }
-
-    .course-card p {
-      color: #ccc;
-    }
-
-    .course-card:hover {
-      background-color: #FFD700;
-      color: #000;
-      transform: scale(1.05);
-    }
-
-    .course-card:hover h3 {
-      color: #000;
-    }
-
-    #contact p, #resources p {
-      color: #ccc;
-      font-size: 18px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    /* Sign-up form styling */
     form {
       max-width: 500px;
       margin: auto;
@@ -174,6 +212,7 @@
     form button:hover {
       background-color: #e6c200;
     }
+
   </style>
 </head>
 <body>
@@ -195,47 +234,87 @@
     </div>
   </header>
 
-  <!-- Courses Section -->
   <section id="courses">
-    <h2>Our Courses</h2>
-    <div class="course-grid">
-      <div class="course-card">
-        <h3>AI for Business & Entrepreneurship</h3>
-        <p>Automation, marketing optimization, sales forecasting, and AI-driven innovation for small to large businesses.</p>
+    <div class="courses-container">
+      <h2>Our Courses</h2>
+      <button class="accordion">
+        AI for Business & Entrepreneurship <span class="arrow">></span>
+      </button>
+      <div class="panel">
+        <div class="course-details">
+          <p><strong>Course Overview:</strong> Learn to leverage AI to scale your business, optimize operations, and innovate products—no coding required.</p>
+          <p><strong>Course Objectives:</strong> Understand AI applications in business, Automate repetitive tasks using AI tools, Apply AI for marketing, sales, and customer engagement, Analyze data to make informed decisions, Innovate products and services, Reduce operational costs and risks.</p>
+          <p><strong>Course Modules:</strong> Introduction to AI for Entrepreneurs, AI for Business Automation, Data-Driven Decision Making, AI in Marketing & Customer Engagement, Product & Service Innovation, Risk Management & Cost Optimization, Implementing AI in Your Business.</p>
+          <p><strong>Hands-on Projects:</strong> Build an AI-powered chatbot or sales dashboard, Deploy a small AI solution for marketing automation.</p>
+          <a href="#signup"><button class="sign-up-button">Sign Up to Enroll</button></a>
+        </div>
       </div>
-      <div class="course-card">
-        <h3>AI for Agriculture</h3>
-        <p>Precision farming, crop health monitoring, yield forecasting, and smart farm management tools.</p>
+
+      <button class="accordion">
+        AI for Agriculture <span class="arrow">></span>
+      </button>
+      <div class="panel">
+        <div class="course-details">
+          <p><strong>Course Overview:</strong> Learn about precision farming, crop health monitoring, yield forecasting, and smart farm management tools with AI.</p>
+          <p><strong>Course Objectives:</strong> Implement AI in operations and resource allocation, Enhance decision-making with data analytics, Apply AI to social or environmental initiatives, Measure outcomes with AI-powered tools.</p>
+          <p><strong>Course Modules:</strong> AI for Organizations & NGOs, AI for Sustainability & Operations, Data-Driven Decision Making, Organizational AI Projects.</p>
+          <p><strong>Hands-on Projects:</strong> Develop AI tools to allocate resources efficiently, Build dashboards showing organizational or social impact.</p>
+          <a href="#signup"><button class="sign-up-button">Sign Up to Enroll</button></a>
+        </div>
       </div>
-      <div class="course-card">
-        <h3>AI for Climate & Sustainability</h3>
-        <p>Climate modeling, renewable energy optimization, disaster prediction, and ecosystem restoration.</p>
+
+      <button class="accordion">
+        AI for Climate & Sustainability <span class="arrow">></span>
+      </button>
+      <div class="panel">
+        <div class="course-details">
+          <p><strong>Course Overview:</strong> Help organizations use AI to improve service delivery, operations, and social impact, suitable for technical and non-technical teams.</p>
+          <p><strong>Course Objectives:</strong> Implement AI in operations and resource allocation, Enhance decision-making with data analytics, Apply AI to social or environmental initiatives, Measure outcomes with AI-powered tools.</p>
+          <p><strong>Course Modules:</strong> AI for Organizations & NGOs, AI for Sustainability & Operations, Data-Driven Decision Making, Organizational AI Projects.</p>
+          <p><strong>Hands-on Projects:</strong> Develop AI tools to allocate resources efficiently, Build dashboards showing organizational or social impact.</p>
+          <a href="#signup"><button class="sign-up-button">Sign Up to Enroll</button></a>
+        </div>
       </div>
-      <div class="course-card">
-        <h3>AI for Students & Academic Projects</h3>
-        <p>AI fundamentals, data science, deep learning, and portfolio project creation for students.</p>
+
+      <button class="accordion">
+        AI for Students & Academic Projects <span class="arrow">></span>
+      </button>
+      <div class="panel">
+        <div class="course-details">
+          <p><strong>Course Overview:</strong> Equip students with foundational AI knowledge, data science skills, and deployment experience, designed for coders and non-coders.</p>
+          <p><strong>Course Objectives:</strong> Understand AI fundamentals and applications, Analyze datasets using AI, Train machine learning and deep learning models, Deploy AI projects to web or cloud platforms, Complete a portfolio-ready AI project.</p>
+          <p><strong>Course Modules:</strong> AI Fundamentals, AI for Data Science, Deep Learning & AI Deployment, Capstone AI Project.</p>
+          <p><strong>Hands-on Projects:</strong> Build predictive models and AI-powered study assistants, Deploy AI projects even without prior coding experience.</p>
+          <a href="#signup"><button class="sign-up-button">Sign Up to Enroll</button></a>
+        </div>
       </div>
-      <div class="course-card">
-        <h3>AI for Coders & Non-Coders</h3>
-        <p>No-code AI tools, chatbot building, content generation, and beginner-friendly model training.</p>
+
+      <button class="accordion">
+        AI for Coders & Non-Coders <span class="arrow">></span>
+      </button>
+      <div class="panel">
+        <div class="course-details">
+          <p><strong>Course Overview:</strong> Learn AI fundamentals and practical applications for everyday life, designed for everyone, coders or non-coders.</p>
+          <p><strong>Course Objectives:</strong> Understand AI basics without technical jargon, Explore AI tools for creativity, productivity, and learning, Build simple AI projects for personal or professional use.</p>
+          <p><strong>Course Modules:</strong> AI Made Simple, Everyday AI Tools, Hands-On AI Projects, AI Safety & Ethics.</p>
+          <p><strong>Hands-on Projects:</strong> Generate AI content or social media posts, Build small AI apps at home or work.</p>
+          <a href="#signup"><button class="sign-up-button">Sign Up to Enroll</button></a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Us</h2>
     <p>Email: info@wabtech.com | Phone: +123 456 7890</p>
     <p>We’re here to answer your questions and help you start your AI journey.</p>
   </section>
 
-  <!-- Resources Section -->
   <section id="resources">
     <h2>Resources</h2>
     <p>Access free guides, AI toolkits, learning materials, and industry insights to boost your AI knowledge.</p>
   </section>
 
-  <!-- Sign-Up Section -->
   <section id="signup">
     <h2>Sign Up</h2>
     <form>
@@ -252,6 +331,23 @@
       <button type="submit">Get Started</button>
     </form>
   </section>
+
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
 
 </body>
 </html>
