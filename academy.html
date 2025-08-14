@@ -9,6 +9,7 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: #000;
       color: #FFD700;
+      scroll-behavior: smooth;
     }
 
     .header {
@@ -41,6 +42,10 @@
       right: 40px;
     }
 
+    .nav-buttons a {
+      text-decoration: none;
+    }
+
     .nav-buttons button {
       background-color: transparent;
       border: 2px solid #FFD700;
@@ -63,17 +68,6 @@
       border-radius: 10px;
     }
 
-    .section {
-      padding: 50px;
-      text-align: center;
-    }
-
-    .coming-soon {
-      font-size: 20px;
-      color: #ccc;
-      margin-top: 10px;
-    }
-
     @media (max-width: 768px) {
       .header {
         flex-direction: column;
@@ -90,14 +84,105 @@
         margin-top: 20px;
       }
     }
+
+    /* Section styling */
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    #courses h2, #contact h2, #resources h2, #signup h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+      color: #FFD700;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .course-card {
+      border: 1px solid #FFD700;
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .course-card h3 {
+      margin-top: 0;
+      color: #FFD700;
+    }
+
+    .course-card p {
+      color: #ccc;
+    }
+
+    .course-card:hover {
+      background-color: #FFD700;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    .course-card:hover h3 {
+      color: #000;
+    }
+
+    #contact p, #resources p {
+      color: #ccc;
+      font-size: 18px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    /* Sign-up form styling */
+    form {
+      max-width: 500px;
+      margin: auto;
+      background: #111;
+      padding: 30px;
+      border-radius: 10px;
+      border: 1px solid #FFD700;
+    }
+
+    form input, form select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #FFD700;
+      border-radius: 5px;
+      background: #000;
+      color: #FFD700;
+      font-size: 16px;
+    }
+
+    form button {
+      background-color: #FFD700;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    form button:hover {
+      background-color: #e6c200;
+    }
   </style>
 </head>
 <body>
 
   <div class="nav-buttons">
-    <button onclick="document.getElementById('courses').scrollIntoView({behavior: 'smooth'})">Courses</button>
-    <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Contact Us</button>
-    <button onclick="document.getElementById('resources').scrollIntoView({behavior: 'smooth'})">Resources</button>
+    <a href="#courses"><button>Courses</button></a>
+    <a href="#contact"><button>Contact Us</button></a>
+    <a href="#resources"><button>Resources</button></a>
+    <a href="#signup"><button>Sign Up</button></a>
   </div>
 
   <header class="header">
@@ -111,21 +196,61 @@
   </header>
 
   <!-- Courses Section -->
-  <section id="courses" class="section">
+  <section id="courses">
     <h2>Our Courses</h2>
-    <p class="coming-soon">🚀 Course list will appear here soon.</p>
-  </section>
-
-  <!-- Resources Section -->
-  <section id="resources" class="section">
-    <h2>Resources</h2>
-    <p class="coming-soon">📚 Our AI learning resources are coming soon! Stay tuned for eBooks, videos, and toolkits.</p>
+    <div class="course-grid">
+      <div class="course-card">
+        <h3>AI for Business & Entrepreneurship</h3>
+        <p>Automation, marketing optimization, sales forecasting, and AI-driven innovation for small to large businesses.</p>
+      </div>
+      <div class="course-card">
+        <h3>AI for Agriculture</h3>
+        <p>Precision farming, crop health monitoring, yield forecasting, and smart farm management tools.</p>
+      </div>
+      <div class="course-card">
+        <h3>AI for Climate & Sustainability</h3>
+        <p>Climate modeling, renewable energy optimization, disaster prediction, and ecosystem restoration.</p>
+      </div>
+      <div class="course-card">
+        <h3>AI for Students & Academic Projects</h3>
+        <p>AI fundamentals, data science, deep learning, and portfolio project creation for students.</p>
+      </div>
+      <div class="course-card">
+        <h3>AI for Coders & Non-Coders</h3>
+        <p>No-code AI tools, chatbot building, content generation, and beginner-friendly model training.</p>
+      </div>
+    </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="section">
+  <section id="contact">
     <h2>Contact Us</h2>
-    <p class="coming-soon">📧 Get in touch at: contact@wabtech.com</p>
+    <p>Email: info@wabtech.com | Phone: +123 456 7890</p>
+    <p>We’re here to answer your questions and help you start your AI journey.</p>
+  </section>
+
+  <!-- Resources Section -->
+  <section id="resources">
+    <h2>Resources</h2>
+    <p>Access free guides, AI toolkits, learning materials, and industry insights to boost your AI knowledge.</p>
+  </section>
+
+  <!-- Sign-Up Section -->
+  <section id="signup">
+    <h2>Sign Up</h2>
+    <form>
+      <input type="text" name="fullname" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <select name="usertype" required>
+        <option value="">Select Your Category</option>
+        <option value="organization">Organization</option>
+        <option value="individual">Individual</option>
+        <option value="student">Student</option>
+        <option value="professional">Professional</option>
+      </select>
+      <button type="submit">Get Started</button>
+    </form>
   </section>
 
 </body>
