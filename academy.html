@@ -2,260 +2,102 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>WabTech AI Education Programs</title>
+  <title>WabTech Education Programs</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       background-color: #000;
-      color: #fff;
+      color: #FFD700;
     }
-    header {
-      background-color: #000;
-      padding: 40px;
-      text-align: center;
-      color: gold;
-    }
-    header h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 18px;
-      margin: 5px 0;
-    }
-    .container {
+
+    .header {
       display: flex;
+      justify-content: space-between;
+      align-items: center;
       padding: 40px;
-    }
-    .sidebar {
-      width: 220px;
-      background-color: #111;
-      padding: 20px;
-      border-right: 1px solid gold;
-    }
-    .sidebar a {
-      display: block;
-      color: gold;
-      margin-bottom: 15px;
-      text-decoration: none;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .content {
-      flex: 1;
-      padding: 0 40px;
-    }
-    .tab {
-      display: none;
-    }
-    .tab.active {
-      display: block;
-    }
-    .course-title {
-      font-size: 28px;
-      color: gold;
-      margin-bottom: 10px;
-    }
-    .tagline {
-      font-size: 16px;
-      margin-bottom: 20px;
-      color: #fff;
-    }
-    .learn-section h3 {
-      color: gold;
-      margin-bottom: 10px;
-    }
-    .learn-section ul {
-      list-style: none;
-      padding: 0;
-    }
-    .learn-section li {
-      margin-bottom: 10px;
-      padding-left: 20px;
-      position: relative;
-    }
-    .learn-section li::before {
-      content: "✔";
-      position: absolute;
-      left: 0;
-      color: gold;
-    }
-    .enroll-form {
-      background-color: #111;
-      padding: 20px;
-      border: 1px solid gold;
-      max-width: 400px;
-      margin-top: 30px;
-    }
-    .enroll-form h3 {
-      color: gold;
-      margin-bottom: 15px;
-    }
-    .enroll-form label {
-      display: block;
-      margin-top: 10px;
-      color: #fff;
-    }
-    .enroll-form input, .enroll-form select {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
       background-color: #000;
-      border: 1px solid gold;
-      color: #fff;
     }
-    .enroll-form button {
-      margin-top: 20px;
-      padding: 10px;
-      background-color: gold;
-      color: black;
-      border: none;
+
+    .header-left {
+      max-width: 50%;
+    }
+
+    .header-left h1 {
+      font-size: 48px;
+      margin: 0;
       font-weight: bold;
+    }
+
+    .header-left p {
+      font-size: 20px;
+      margin-top: 10px;
+      color: #ccc;
+    }
+
+    .nav-buttons {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+    }
+
+    .nav-buttons button {
+      background-color: transparent;
+      border: 2px solid #FFD700;
+      color: #FFD700;
+      padding: 10px 20px;
+      margin-left: 10px;
+      font-size: 14px;
       cursor: pointer;
+      transition: background-color 0.3s ease;
     }
-    .image-container {
-      width: 400px;
-      padding-left: 40px;
+
+    .nav-buttons button:hover {
+      background-color: #FFD700;
+      color: #000;
     }
-    .image-container img {
-      width: 100%;
-      border: 2px solid gold;
+
+    .header-right img {
+      max-width: 400px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .header-right img {
+        margin-top: 20px;
+        max-width: 90%;
+      }
+
+      .nav-buttons {
+        position: static;
+        margin-top: 20px;
+      }
     }
   </style>
-  <script>
-    function showTab(tabId) {
-      const tabs = document.querySelectorAll('.tab');
-      tabs.forEach(tab => tab.classList.remove('active'));
-      document.getElementById(tabId).classList.add('active');
-    }
-  </script>
 </head>
 <body>
 
-<header>
-  <h1>WabTech AI Education Programs</h1>
-  <p>Artificial Intelligence for Coders & Non-Coders</p>
-  <p>Explore Our AI Courses</p>
-</header>
-
-<div class="container">
-  <div class="sidebar">
-    <a onclick="showTab('entrepreneurs')">Entrepreneurs</a>
-    <a onclick="showTab('students')">Students</a>
-    <a onclick="showTab('professionals')">Professionals</a>
-    <a onclick="showTab('organizations')">Organizations</a>
-    <a onclick="showTab('general')">General Public</a>
-    <a onclick="showTab('coders')">Coders</a>
+  <div class="nav-buttons">
+    <button>Courses</button>
+    <button>Contact Us</button>
+    <button>Resources</button>
   </div>
 
-  <div class="content">
-
-    <div class="tab active" id="entrepreneurs">
-      <div class="course-title">Artificial Intelligence for Entrepreneurs</div>
-      <div class="tagline">Grow your business, streamline operations, and innovate with AI — no coding required.</div>
-      <div class="learn-section">
-        <h3>What You’ll Learn</h3>
-        <ul>
-          <li>Understand AI applications in business</li>
-          <li>Automate repetitive tasks using AI tools</li>
-          <li>Apply AI for marketing, sales, and customer engagement</li>
-          <li>Analyze data to make informed decisions</li>
-          <li>Innovate products and services</li>
-        </ul>
-      </div>
-      <div class="enroll-form">
-        <h3>Enroll Now</h3>
-        <label for="category1">I am an:</label>
-        <select id="category1">
-          <option>Entrepreneur</option>
-        </select>
-        <label for="name1">Full Name</label>
-        <input type="text" id="name1">
-        <label for="email1">Email Address</label>
-        <input type="email" id="email1">
-        <label for="password1">Create Password</label>
-        <input type="password" id="password1">
-        <button type="submit">Enroll Me</button>
-      </div>
+  <header class="header">
+    <div class="header-left">
+      <h1>WabTech Education Programs</h1>
+      <p>Artificial Intelligence for Coders and Non-Coders</p>
     </div>
-
-    <div class="tab" id="students">
-      <div class="course-title">Artificial Intelligence for Students</div>
-      <div class="tagline">Explore AI concepts, tools, and projects to prepare for future careers and innovation.</div>
-      <div class="learn-section">
-        <h3>What You’ll Learn</h3>
-        <ul>
-          <li>Understand how AI works</li>
-          <li>Use AI tools for school projects</li>
-          <li>Explore ethical and social impacts of AI</li>
-          <li>Build simple AI models</li>
-          <li>Prepare for AI-related careers</li>
-        </ul>
-      </div>
+    <div class="header-right">
+      <img src="ai-pic.jpg" alt="AI Visual">
     </div>
+  </header>
 
-    <div class="tab" id="professionals">
-      <div class="course-title">Artificial Intelligence for Professionals</div>
-      <div class="tagline">Enhance your career with AI tools for productivity, decision-making, and innovation.</div>
-      <div class="learn-section">
-        <h3>What You’ll Learn</h3>
-        <ul>
-          <li>Use AI to improve workflow</li>
-          <li>Analyze data with AI tools</li>
-          <li>Integrate AI into your field</li>
-          <li>Collaborate with AI systems</li>
-          <li>Stay competitive in a tech-driven world</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="tab" id="organizations">
-      <div class="course-title">Artificial Intelligence for Organizations</div>
-      <div class="tagline">Empower teams, optimize operations, and drive innovation with AI strategies.</div>
-      <div class="learn-section">
-        <h3>What You’ll Learn</h3>
-        <ul>
-          <li>Develop AI strategies for your organization</li>
-          <li>Train teams to use AI tools</li>
-          <li>Improve efficiency and decision-making</li>
-          <li>Use AI for customer service and engagement</li>
-          <li>Drive innovation and growth</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="tab" id="general">
-      <div class="course-title">Artificial Intelligence for the General Public</div>
-      <div class="tagline">Learn how AI affects your life and how to use it safely and effectively.</div>
-      <div class="learn-section">
-        <h3>What You’ll Learn</h3>
-        <ul>
-          <li>Understand AI in everyday life</li>
-          <li>Use AI tools for personal tasks</li>
-          <li>Explore AI ethics and safety</li>
-          <li>Recognize AI in media and technology</li>
-          <li>Make informed decisions about AI</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="tab" id="coders">
-      <div class="course-title">Artificial Intelligence for Coders</div>
-      <div class="tagline">Build and deploy AI models, integrate APIs, and solve real-world problems with code.</div>
-      <div class="learn-section">
-        <h3>What You’ll Learn</h3>
-        <ul>
-          <li>Build machine learning models</li>
-          <li>Use AI libraries and frameworks</li>
-          <li>Integrate AI APIs into your applications</li>
-          <li>Explore natural language processing (NLP) and computer vision</li>
-          <li>Deploy AI solutions to the cloud</li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-</div>
 </body>
 </html>
