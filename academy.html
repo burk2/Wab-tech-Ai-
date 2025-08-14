@@ -63,6 +63,17 @@
       border-radius: 10px;
     }
 
+    .section {
+      padding: 50px;
+      text-align: center;
+    }
+
+    .coming-soon {
+      font-size: 20px;
+      color: #ccc;
+      margin-top: 10px;
+    }
+
     @media (max-width: 768px) {
       .header {
         flex-direction: column;
@@ -84,9 +95,9 @@
 <body>
 
   <div class="nav-buttons">
-    <button>Courses</button>
-    <button>Contact Us</button>
-    <button>Resources</button>
+    <button onclick="document.getElementById('courses').scrollIntoView({behavior: 'smooth'})">Courses</button>
+    <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Contact Us</button>
+    <button onclick="document.getElementById('resources').scrollIntoView({behavior: 'smooth'})">Resources</button>
   </div>
 
   <header class="header">
@@ -98,6 +109,24 @@
       <img src="ai-pic.jpg" alt="AI Visual">
     </div>
   </header>
+
+  <!-- Courses Section -->
+  <section id="courses" class="section">
+    <h2>Our Courses</h2>
+    <p class="coming-soon">🚀 Course list will appear here soon.</p>
+  </section>
+
+  <!-- Resources Section -->
+  <section id="resources" class="section">
+    <h2>Resources</h2>
+    <p class="coming-soon">📚 Our AI learning resources are coming soon! Stay tuned for eBooks, videos, and toolkits.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p class="coming-soon">📧 Get in touch at: contact@wabtech.com</p>
+  </section>
 
 </body>
 </html>
